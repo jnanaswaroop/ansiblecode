@@ -1,0 +1,5 @@
+---
+# vars file for tomcat
+tomcat_port_number: "8090"
+set_username: "admin"
+set_password: "admin"

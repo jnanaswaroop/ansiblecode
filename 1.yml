@@ -1,0 +1,9 @@
+---
+- name: To copy 1.yml file into target host servers
+  hosts: myservers
+  tasks:
+    - name: Copy file now
+      copy:
+        src: 1.yml
+        dest: /root/
+      become: true

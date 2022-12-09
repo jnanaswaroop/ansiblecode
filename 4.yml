@@ -1,0 +1,19 @@
+---
+- name: Resistry and when usage inside playbook if more number of directories/files are available
+  hosts: myservers
+    # become: true      ==> required if host server is not a root user
+  tasks:
+    - name: Displaying files in home directory of target servers
+      shell: "ls"
+      register: output_ls
+    
+    - debug:
+        var: output_ls
+   
+    - name: copt 1.yml if 1.yml is present inside root directory in myservers
+      copy:
+        src: 2.yml
+        dest: /root/
+      loop: "{{ output_ls.stdout_lines }}"     # using array stdout_lines
+      when: item == "2.yml"
+

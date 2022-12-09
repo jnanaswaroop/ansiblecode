@@ -1,0 +1,12 @@
+---
+- name: Resistry usage inside playbook
+  hosts: all
+    # become: true
+  tasks:
+    - name: Displaying files in home directory of target servers
+      shell: "ls"
+      register: output_ls
+    
+    - debug:
+        var: output_ls
+

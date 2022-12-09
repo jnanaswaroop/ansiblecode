@@ -1,0 +1,43 @@
+---
+# tasks file for tomcat
+- name: Running apt update
+  apt:
+    update_cache: yes
+
+- name: Installing Java
+  apt:
+    name: "{{ java_package }}"
+    state: latest
+
+- name: Installing Tomcat server by downloading apache-tomcat-10.0.27.tar.gz
+  get_url:
+    url: "{{ tomcat_url }}"
+    dest: "{{ destination_folder }}"
+
+- name: Extracting Tar file
+  unarchive:
+    src: "{{ source_tar_path }}"
+    dest: "{{ destination_folder }}"
+    remote_src: yes
+
+- name: Changing port number using template module
+  template:
+    src: template/server.xml.j2
+    dest: "{{ tomcat_server_path }}"  
+
+- name: Setting up tomcat-users
+  template:
+    src: template/tomcat-users.xml.j2
+    dest: "{{ tomcat_user_details_path }}"
+
+- name: Setting up manager
+  template:
+    src: template/context.xml.j2
+    dest: "{{ manager_path }}"
+  notify: restart tomcat
+
+- name: Setting up host-manager
+  template:
+    src: template/contexthm.xml.j2
+    dest: "{{ host_manager_path }}"
+

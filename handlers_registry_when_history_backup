@@ -1,0 +1,711 @@
+    1  apt install tree
+    2  cd /tmp
+    3  cucurl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz
+    4  cd
+    5  cd /opt
+    6  wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+    7  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+    8  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+    9  sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+   10  ls
+   11  sudo tar xzvf apache-tomcat-10.0.27.tar.gz /opt/tomcat
+   12  sudo tar xzvf apache-tomcat-10.0.27.tar.gz
+   13  sudo chown -R tomcat:tomcat /opt/tomcat/
+   14  ls
+   15  cd apache-tomcat-10.0.27/
+   16  sudo chown -R tomcat:tomcat /opt/tomcat/
+   17  ls
+   18  cd bin
+   19  ls
+   20  ls -lt
+   21  sh startup.sh 
+   22  ps -C Tomcat
+   23  netstat -ntlpu | grep 8080
+   24  apt install net-tools
+   25  netstat -ntlpu | grep 8080
+   26  ps -C Tomcat
+   27  sh startup.sh
+   28  cd /opt
+   29  pwd
+   30  cd
+   31  pwd
+   32  cd /opt
+   33  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+   34  ls
+   35  rm -rf *
+   36  ls
+   37  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+   38  ls
+   39  cd apache-tomcat-10.0.27/
+   40  ls
+   41  cd ..
+   42  tar xzvf apache-tomcat-10.0.27.tar.gz 
+   43  ls
+   44  cd apache-tomcat-10.0.27/
+   45  ls
+   46  cd bin
+   47  ls
+   48  sh startup.sh 
+   49  cd ../conf
+   50  ls
+   51  vi server.xml 
+   52  cd /opt
+   53  cd apache-tomcat-10.0.27/conf/
+   54  ls
+   55  vi server.xml 
+   56  cd ../bin
+   57  sh shutdown.sh 
+   58  sh startup.sh 
+   59  cd ../conf
+   60  vi server.xml 
+   61  cd ../bin
+   62  sh shutdown.sh 
+   63  sh startup.sh 
+   64  cd ../conf
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd conf
+   69  ls
+   70  vi tomcat-users.xml 
+   71  cd ..
+   72  ls
+   73  cd webapps
+   74  ls
+   75  cd manager/
+   76  ls
+   77  cd META-INF/
+   78  ls
+   79  vi context.xml 
+   80  cd ../../../
+   81  ls
+   82  cd webapps/
+   83  ls
+   84  cd host-manager/
+   85  ls
+   86  META-INF/
+   87  ls
+   88  cd META-INF/
+   89  ls
+   90  vi context.xml 
+   91  cd ../../../bin
+   92  ls
+   93  sh shutdown.sh 
+   94  sh startup.sh 
+   95  cd
+   96  pwd
+   97  git clone https://github.com/jnanaswaroop/hello-world-war.git
+   98  cd
+   99  ls
+  100  cd hello-world-war/
+  101  ls
+  102  mvn package 
+  103  ls
+  104  cd target/
+  105  ls
+  106  cp -r hello-world-war-1.0.0.war /opt/apache-tomcat-10.0.27/webapps/
+  107  cd bin
+  108  cd
+  109  cd /opt/apache-tomcat-10.0.27/bin/
+  110  sh shutdown.sh 
+  111  ps -ef | grep catalina
+  112  ps -C catalina
+  113  ps -C 29192
+  114  sh startup.sh 
+  115  ps -C 29192
+  116  ps -ef | grep catalina
+  117  cd
+  118  ls
+  119  cd hello-world-war/
+  120  git pull
+  121  git status
+  122  ls
+  123  mvn package
+  124  cd target
+  125  ls
+  126  cp -r hello-world-war-1.0.0.war /opt/apache-tomcat-10.0.27/webapps/
+  127  cd
+  128  cd /opt/apache-tomcat-10.0.27/bin/
+  129  sh shutdown.sh 
+  130  sh startup.sh 
+  131  cd
+  132  ls
+  133  rm -rf hello-world-war/
+  134  git clone https://github.com/jnanaswaroop/hello-world-war.git
+  135  ls
+  136  cd hello-world-war/
+  137  ls
+  138  cd
+  139  ls
+  140  rsync -r hello-world-war ubuntu@172.31.33.132:/home/ubuntu
+  141  ssh-keygen
+  142  ls -a
+  143  cd .ssh
+  144  ls
+  145  cat id_rsa.pub 
+  146  cd
+  147  rsync -r hello-world-war ubuntu@172.31.33.132:/home/ubuntu
+  148  cd /opt/apache-tomcat-10.0.27/webapps/
+  149  ls
+  150  cd /opt
+  151  ls
+  152  rm -rf *
+  153  ls
+  154  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+  155  ls
+  156  tar xzvf apache-tomcat-10.0.27.tar.gz 
+  157  ls
+  158  cd apache-tomcat-10.0.27/
+  159  ls
+  160  cd bin
+  161  ls
+  162  cd ..
+  163  ls
+  164  cd conf
+  165  ls
+  166  vi server.xml 
+  167  vi tomcat-users.xml 
+  168  cd ../webapps/
+  169  ls
+  170  cd manager/
+  171  ls
+  172  cd META-INF/
+  173  ls
+  174  vi context.xml 
+  175  cd ../../host-manager/
+  176  ls
+  177  cd META-INF/
+  178  vi context.xml 
+  179  cd
+  180  cd /opt/apache-tomcat-10.0.27/bin/
+  181  sh shutdown.sh 
+  182  sh startup.sh 
+  183  cd
+  184  su - ubuntu
+  185  cd /opt/apache-tomcat-10.0.27/bin
+  186  sh shutdown.sh 
+  187  sh startup.sh 
+  188  history
+  189  apt update
+  190  apt install default-jdk
+  191  java -version
+  192  ls
+  193  rm -rf *
+  194  ls
+  195  cd /opt
+  196  ls
+  197  rm -rf *
+  198  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+  199  ls
+  200  tar xzvf apache-tomcat-10.0.27.tar.gz 
+  201  ls
+  202  cd apache-tomcat-10.0.27/
+  203  ls
+  204  cd bin
+  205  ls
+  206  sh shutdown.sh 
+  207  sh startup.sh 
+  208  cd
+  209  ls
+  210  git clone https://github.com/jnanaswaroop/hello-world-war.git
+  211  cd hello-world-war/
+  212  ls
+  213  mvn package
+  214  cd target/
+  215  ls
+  216  scp -r hello-world-war-1.0.0 root@172.31.45.29:/home/root/
+  217  cd
+  218  ssh-keygen
+  219  ls -a
+  220  cd .ssh
+  221  ls
+  222  cat id_rsa.pub 
+  223  cd
+  224  ls
+  225  cd hello-world-war/
+  226  ls
+  227  cd target/
+  228  ls
+  229  scp -r hello-world-war-1.0.0 root@172.31.45.29:/home/root/
+  230  scp -r hello-world-war-1.0.0.war root@172.31.45.29:/home/root/
+  231  scp -r hello-world-war-1.0.0.war root@172.31.45.29:/root/
+  232  ls
+  233  cd hello-world-war/
+  234  ls
+  235  cd target/
+  236  ls
+  237  scp -r hello-world-war-1.0.0 root@172.31.45.29:/root
+  238  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+  239  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  240  sudo apt update
+  241  sudo apt install jenkins
+  242  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+  243  sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  244  sudo apt update
+  245  sudo apt install jenkins
+  246  sudo systemctl start jenkins.service
+  247  jenkins -version
+  248  jenkins --version
+  249  sudo systemctl status jenkins
+  250  cd
+  251  cd /opt/apache-tomcat-10.0.27/bin
+  252  sh shutdown.sh 
+  253  cd
+  254  sudo systemctl start jenkins.service
+  255  sudo systemctl status jenkins
+  256  /var/lib/jenkins/secrets/initialAdminPassword
+  257  cat /var/lib/jenkins/secrets/initialAdminPassword
+  258  history > history_backup
+  259  cat history_backup 
+  260  ls
+  261  su - ubuntu
+  262  cd /opt/apache-tomcat-10.0.27/
+  263  ls
+  264  cd conf
+  265  ls
+  266  vi server.xml 
+  267  cd ../bin
+  268  ls
+  269  sh shutdown.sh 
+  270  sh startup.sh 
+  271  cd ../
+  272  ls
+  273  cd webapps/
+  274  ls
+  275  cd manager
+  276  ls
+  277  cd META-INF/
+  278  vi context.xml 
+  279  cd ../../host-manager/
+  280  cd META-INF/
+  281  vi context.xml 
+  282  cd ../../
+  283  ls
+  284  cd ..
+  285  ls
+  286  cd conf
+  287  ls
+  288  vi tomcat-users.xml 
+  289  cd ../bin/
+  290  sh shutdown.sh 
+  291  sh startup.sh 
+  292  cd ..
+  293  ls
+  294  cd webapps/
+  295  ls
+  296  cd ..
+  297  cd
+  298  ls
+  299  cd hello-world-war/
+  300  ls
+  301  cd target/
+  302  ls
+  303  cp hello-world-war-1.0.0.war /opt/apache-tomcat-10.0.27/webapps/
+  304  cd
+  305  cd /opt/apache-tomcat-10.0.27/bin
+  306  sh shutdown.sh 
+  307  sh startup.sh 
+  308  ls
+  309  cd ..
+  310  cd
+  311  ls
+  312  rm -rf hello-world-war/
+  313  rm -rf snap
+  314  ls
+  315  cd /opt
+  316  ls
+  317  rm -rf *
+  318  ls
+  319  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+  320  ls
+  321  tar xzvf apache-tomcat-10.0.27.tar.gz 
+  322  ls
+  323  cd apache-tomcat-10.0.27/
+  324  ls
+  325  cd conf
+  326  ls
+  327  vi server.xml 
+  328  vi tomcat-users.xml 
+  329  cd ../webapps/
+  330  ls
+  331  cd manager/
+  332  cd META-INF/
+  333  vi context.xml 
+  334  cd ../../host-manager/META-INF/
+  335  vi context.xml 
+  336  cd
+  337  ls
+  338  git clone https://github.com/Srikanthkittane/hello-world-war.git
+  339  cd hello-world-war/
+  340  ls
+  341  mvn package
+  342  cd target/
+  343  ls
+  344  cp hello-world-war-1.0.0.war /opt/apache-tomcat-10.0.27/webapps/
+  345  cd /opt/apache-tomcat-10.0.27/bin
+  346  ls
+  347  sh shutdown.sh 
+  348  sh startup.sh 
+  349  cd
+  350  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+  351  ls
+  352  sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  353  sudo apt update
+  354  sudo apt install jenkins
+  355  systemctl start jenkins.service
+  356  systemctl status jenkins.service
+  357  systemctl status jenkins
+  358  clear
+  359  service jenkins status
+  360  clear
+  361  service jenkins start
+  362  sudo ufw allow 8080
+  363  sudo ufw allow OpenSSH
+  364  sudo ufw enable
+  365  sudo ufw status
+  366  clear
+  367  service jenkins restart
+  368  clear
+  369  exit
+  370  ls
+  371  vi installtomcatmaven.sh
+  372  sh installtomcatmaven.sh
+  373  exit
+  374  su - jenkins
+  375  apt update
+  376  apt install ansible
+  377  cd /etc
+  378  ls
+  379  mkdir -p ansible
+  380  cd
+  381  ssh-keygen
+  382  cd .ssh
+  383  ls
+  384  cat id_rsa.pub
+  385  cd
+  386  ssh 3.110.218.192    
+  387  ssh 15.206.163.199    
+  388  clear
+  389  vi /etc/ansible/hosts
+  390  ansible --version
+  391  ansible all -m ping
+  392  ansible all -m ping -i /etc/ansible/hosts
+  393  exit
+  394  ssh-keygen
+  395  cd .ssh
+  396  ls
+  397  cat id_rsa.pub
+  398  cd
+  399  ssh 172.31.4.21
+  400  ssh 172.31.7.162
+  401  ssh 172.31.4.21
+  402  history
+  403  ansible all -m ping -i /etc/ansible/hosts
+  404  vi /etc/ansible/hosts
+  405  ansible all -m command -a "df -h"
+  406  ansible all -m command -a "hostname -i"
+  407  ansible all -m ping
+  408  ansible all -m command -a "name=git state=latest" 
+  409  ansible all -m apt -a "name=git state=latest" 
+  410  ansible all -m apt -a "name=python state=latest" 
+  411  ansible all -m apt -a "name=Python state=latest" 
+  412  ansible all -m apt -a "name=tree state=latest" 
+  413  ansible all -m ping
+  414  ansible all -m apt -a "name=tree state=latest" -i /etc/ansible/hosts
+  415  vi gitinstall.yaml
+  416  ansible-playbook gitinstall.yaml 
+  417  vi treeinstall.yaml
+  418  ansible-playbook treeinstall.yaml 
+  419  apt install tree
+  420  tree
+  421  cd
+  422  vi treeinstall.yaml
+  423  ansible-playbook treeinstall.yaml 
+  424  vi treeinstall.yaml
+  425  ansible-playbook treeinstall.yaml 
+  426  vi treeinstall.yaml
+  427  ansible-playbook treeinstall.yaml 
+  428  vi myplaybook1.yaml
+  429  ansible-playbook myplaybook1.yaml 
+  430  vi copy.yaml
+  431  ansible-playbook copy.yaml 
+  432  vi myplaybook1.yaml
+  433  ansible-playbook myplaybook1.yaml 
+  434  vi copy.yaml 
+  435  ansible-playbook copy.yaml 
+  436  vi copy.yaml 
+  437  vi myplaybook1.yaml
+  438  ansible-playbook myplaybook1.yaml 
+  439  vi copy.yaml 
+  440  ansible-playbook copy.yaml 
+  441  cp myplaybook1.yaml myplaybook1.yaml.j2
+  442  cat myplaybook1.yaml.j2
+  443  vi myplaybook1.yaml.j2
+  444  cd /opt/
+  445  ls
+  446  cd
+  447  cd /var/lib/jenkins
+  448  ls
+  449  vi config.xml 
+  450  cd workspace/
+  451  ls
+  452  cd
+  453  vi myplaybook1.yaml.j2
+  454  ansible-playbook myplaybook1.yaml.j2 
+  455  ls
+  456  vi copy.yaml 
+  457  ansible-playbook copy.yaml 
+  458  vi hello_world.j2
+  459  cat hello_world.j2 
+  460  vi copy.yaml 
+  461  cat hello_world.j2 
+  462  ansible-playbook copy.yaml 
+  463  vi copy.yaml 
+  464  ansible-playbook copy.yaml 
+  465  cat hello_world.j2 
+  466  vi copy.yaml 
+  467  ansible-playbook copy.yaml 
+  468  vi copy.yaml 
+  469  ansible-playbook copy.yaml 
+  470  vi copy.yaml 
+  471  cat hello_world.j2 
+  472  vi hello_world.j2 
+  473  ansible-playbook copy.yaml 
+  474  vi copy.yaml 
+  475  clear
+  476  ls
+  477  ansible-galaxy init tomcat
+  478  ls
+  479  cd tomcat/
+  480  tree
+  481  ls
+  482  cd tasks
+  483  ls
+  484  vi main.yml 
+  485  cd ..
+  486  ls
+  487  vi /defaults/main.yml
+  488  ls
+  489  cd defaults/
+  490  ls
+  491  vi main.yml 
+  492  cd ..
+  493  cd
+  494  vi tomcat/tasks/main.yml 
+  495  vi tomcat/defaults/main.yml 
+  496  vi tomcat/tasks/main.yml 
+  497  vi tomcat/defaults/main.yml 
+  498  vi tomcat/tasks/main.yml 
+  499  ls
+  500  vi role_tomcat.yaml
+  501  ansible-playbook role_tomcat.yaml 
+  502  vi tomcat/tasks/main.yml 
+  503  vi tomcat/defaults/main.yml 
+  504  ansible-playbook role_tomcat.yaml 
+  505  vi tomcat/defaults/main.yml 
+  506  ansible-playbook role_tomcat.yaml 
+  507  vi tomcat/defaults/main.yml 
+  508  vi tomcat/tasks/main.yml 
+  509  ansible-playbook role_tomcat.yaml 
+  510  vi tomcat/tasks/main.yml 
+  511  ansible-playbook role_tomcat.yaml 
+  512  cat tomcat/defaults/main.yml 
+  513  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+  514  tar -xzvf apache-tomcat-10.0.27.tar.gz 
+  515  ls
+  516  cd tomcat/
+  517  cd
+  518  mkdir -p ~/tomcat/template/
+  519  cp /apache-tomcat-10.0.27/conf/server.xml ~/tomcat/template/
+  520  cd apache-tomcat-10.0.27/
+  521  ls
+  522  cd conf
+  523  ls
+  524  cp server.xml ~/tomcat/template/
+  525  cd
+  526  cd tomcat/template/
+  527  ls
+  528  mv server.xml server.xml.j2
+  529  ls
+  530  vi server.xml.j2 
+  531  cd
+  532  vi tomcat/defaults/main.yml 
+  533  vi tomcat/vars/main.yml 
+  534  vi tomcat/tasks/main.yml 
+  535  vi tomcat/defaults/main.yml 
+  536  ansible-playbook role_tomcat.yaml 
+  537  cd apache-tomcat-10.0.27/conf/
+  538  ls
+  539  cp tomcat-users.xml ~/tomcat/template/
+  540  cd ..
+  541  cd webapps/
+  542  ls
+  543  cd manager/META-INF/
+  544  ls
+  545  cp context.xml ~/tomcat/template/
+  546  cd ../../host-manager/META-INF/
+  547  ls
+  548  mv context.xml contexthm.xml 
+  549  ls
+  550  cp contexthm.xml ~/tomcat/template/
+  551  cd
+  552  vi /tomcat/template/tomcat-users.xml
+  553  cd tomcat/template/
+  554  ls
+  555  mv tomcat-users.xml tomcat-users.xml.j2 
+  556  mv context.xml context.xml.j2 
+  557  mv contexthm.xml contexthm.xml.j2 
+  558  ls
+  559  vi tomcat-users.xml.j2 
+  560  cd
+  561  cd tomcat/defaults/
+  562  ls
+  563  vi main.yml 
+  564  cd tomcat/template/
+  565  ls
+  566  vi tomcat-users.xml.j2 
+  567  cd
+  568  cd tomcat/defaults/
+  569  vi main.yml 
+  570  cd
+  571  cd tomcat/template/
+  572  ls
+  573  vi tomcat-users.xml.j2 
+  574  cd ..
+  575  cd tasks/
+  576  vi main.yml 
+  577  cd tomcat/defaults/
+  578  vi main.yml 
+  579  vi tomcat-users.xml.j2 
+  580  cd
+  581  cd tomcat/template/
+  582  ls
+  583  vi tomcat-users.xml.j2 
+  584  cd
+  585  cd tomcat/defaults/
+  586  ls
+  587  vi main.yml 
+  588  cd
+  589  cd tomcat/template/
+  590  ls
+  591  vi context.xml.j2 
+  592  vi contexthm.xml.j2 
+  593  cd
+  594  cd tomcat/defaults/
+  595  vi main.yml 
+  596  cd
+  597  ansible-playbook role_tomcat.yaml 
+  598  cd tomcat/tasks/
+  599  vi main.yml 
+  600  cd
+  601  cd tomcat/tasks/
+  602  vi main.yml 
+  603  ansible-playbook role_tomcat.yaml 
+  604  cd
+  605  ansible-playbook role_tomcat.yaml 
+  606  cd tomcat/defaults/
+  607  ls
+  608  cd ..
+  609  vars/
+  610  cd vars/
+  611  ls
+  612  vi main.yml 
+  613  cd ..
+  614  cd defaults/
+  615  vi main.yml 
+  616  cd
+  617  ansible-playbook role_tomcat.yaml 
+  618  cd tomcat/defaults/
+  619  vi main.yml 
+  620  cd ..
+  621  cd vars/
+  622  vi main.yml 
+  623  cd
+  624  mkdir -p ansiblecode
+  625  ls
+  626  cp tomcat/ ansiblecode/
+  627  cp -r tomcat/ ansiblecode/
+  628  cp role_tomcat.yaml ansiblecode/
+  629  cd ansiblecode/
+  630  ls
+  631  mkdir tomcatserverinstall
+  632  cp -r tomcat tomcatserverinstall/
+  633  cp role_tomcat.yaml tomcatserverinstall/
+  634  cd ..
+  635  cd ansiblecode/
+  636  ls
+  637  cd tomcatserverinstall/
+  638  ls
+  639  cd ..
+  640  rm -rf role_tomcat.yaml 
+  641  rm -rf tomcat
+  642  git init
+  643  git status
+  644  git add .
+  645  git commit -m "tomcat server install setup"
+  646  git remote add origin https://github.com/jnanaswaroop/ansiblecode.git
+  647  git push -u origin master
+  648  ls
+  649  cd tomcat/
+  650  ls
+  651  cd tasks/
+  652  ls
+  653  vi main.yml 
+  654  cd ..
+  655  ls
+  656  cd handlers/
+  657  vi main.yml 
+  658  cd ..
+  659  vi tasks/main.yml 
+  660  cd
+  661  ansible-playbook role_tomcat.yaml 
+  662  vi role_tomcat.yaml 
+  663  ansible-playbook role_tomcat.yaml 
+  664  vi role_tomcat.yaml 
+  665  ansible-playbook role_tomcat.yaml 
+  666  ls
+  667  vi role_tomcat.yaml 
+  668  ansible-playbook role_tomcat.yaml 
+  669  ls
+  670  ansible-playbook role_tomcat.yaml 
+  671  vi playbook1.yml
+  672  ansible-playbook playbook1.yml 
+  673  vi playbook1.yml
+  674  ansible-playbook playbook1.yml 
+  675  vi 1.yml
+  676  ansible-playbook 1.yml
+  677  vi 1.yml 
+  678  ansible-playbook 1.yml
+  679  vi 1.yml 
+  680  ansible-playbook 1.yml
+  681  vi 1.yml 
+  682  ansible-playbook 1.yml
+  683  vi 1.yml 
+  684  ansible-playbook 1.yml
+  685  vi 2.yml
+  686  ansible-playbook 2.yml 
+  687  vi 2.yml
+  688  ansible-playbook 2.yml 
+  689  ansible-playbook 1.yml
+  690  cp 2.yml 3.yml
+  691  vi 3.yml 
+  692  ansible-playbook 3.yml
+  693  ansible-playbook 2.yml
+  694  ansible-playbook 1.yml
+  695  ansible-playbook 3.yml
+  696  vi 3.yml 
+  697  ansible-playbook 3.yml
+  698  vi 3.yml 
+  699  cp 3.yml 4.yml
+  700  vi 4.yml 
+  701  ansible-playbook 4.yml
+  702  vi 4.yml 
+  703  ansible-playbook 4.yml
+  704  ls
+  705  cat 1.yml 
+  706  cat 2.yml 
+  707  cat 3.yml 
+  708  cat 4.yml 
+  709  ls
+  710  history
+  711  history > handlers_registry_when_history_backup
